@@ -1,0 +1,36 @@
+.top
+{
+
+}
+#topBox
+{
+  background-color: lightgray;
+  height: 10%;
+  border-style: groove;
+  border-color: darkgray:
+}
+#buttonsColumn
+{
+  float: right;
+  padding: 15px;
+}
+#loginButton
+{
+  background-color: blue;
+  color: white;
+  float: right;
+}
+#registerButton
+{
+  background-color: blue;
+  color: white;
+  float: right;
+}
+a:link
+{
+  color:white;
+}
+a:hover
+{
+  background-color: lightblue;
+}
