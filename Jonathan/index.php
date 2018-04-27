@@ -4,20 +4,56 @@
   </head>
   <body>
     <?php
-    $arr = array("Apple", "Bananas", "Pears", "Peaches");
-    echo '<div>';
-    foreach($arr as $x){
+  $db = new mysqli("localhost", "iconjone", "MgtZGj6rZjbRz8QZ", "chinook");
+  if ($db->connect_errno){
+    echo "Sorry, this website is experiencing problems.";
+    echo "Error: " . $mysqli->connect_error . "\n";
+    exit;
+}
 
-        echo '<div style="width:150px;    height:100px; border-bottom:50px;  background:blue; border-style: solid; border-color: white; color:white;">';
+$sql = "SELECT CustomerId, FirstName, LastName FROM customer";
+$result = $db->query($sql);
 
-echo '<div style = "text-align:center; v-align:center; ">';
-        echo $x . "<br>" ;
-        echo '</div>';
-        echo '</div>';
+if (!$result = $db->query($sql))
+{
+echo "Sorry, this website is experiencing problems.";
+echo "Error: " . $mysqli->error . "\n";
+exit;
+}
+
+if ($result->num_rows === 0){
+echo "No results found.";
+}
+else{
+
+while($row = $result->fetch_assoc()){
+
+$id = $row['CustomerId'];
+$fName = $row['FirstName'];
+$lName = $row['LastName'];
+
+echo "<ul>" . $id . "+" .  $fName . " " . $lName .  "</ul> <br>";
+
+}
+}
+
+$albums = array();
 
 
-    }
-    echo '</div>';
+if ($result->num_rows > 0)
+{
+while($row = $result->fetch_assoc()){
+
+
+$albums[] = $row;
+}
+}
+
+
+
+
+var_dump($albums);
+
     ?>
   </body>
 </html>
