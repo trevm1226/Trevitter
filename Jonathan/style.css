@@ -5451,6 +5451,10 @@ pre{
 @media (max-width : 1024px) and (orientation: portrait) {
   .bg-img-alfa:before { background-image: url(../images/static-media/img-alfa-wide-768.png);}
 }
+.centerdivpls{
+  margin:auto;
+  
+}
 
 .bg-dark-alfa-40:before {
   content: " ";
@@ -8581,7 +8585,7 @@ button {
   transition: all .3s ease 0s;
 }
 .button {
-	background-color:#ffea00;
+	background-color:#ff3b00;
   /* font-family: 'Poppins','Open Sans',Arial,Helvetica,sans-serif; */
   font-size:13px;
 	color:#2a2b2f;
