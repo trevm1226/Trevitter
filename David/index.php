@@ -4,7 +4,7 @@
   </head>
   <body>
     <?php
-  $db = new mysqli("localhost", "iconjone", "MgtZGj6rZjbRz8QZ", "chinook");
+  $db = new mysqli("localhost", "password", "password", "chinook");
   if ($db->connect_errno){
     echo "Sorry, this website is experiencing problems.";
     echo "Error: " . $mysqli->connect_error . "\n";
