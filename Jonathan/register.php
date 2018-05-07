@@ -29,7 +29,9 @@ if ($formSubmitted)
        $$field = $_GET[$field];
 
        if($formSubmitted){
+         echo "  <div style=\"margin: auto; width:50%;\">";
        echo "<h1 class=\"centerdivpls\">Thanks For Registering " . $fName . " " . $lName . "</h1>";
+       echo "</div>";
 
      }
      else{
