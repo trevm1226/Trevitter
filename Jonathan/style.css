@@ -4686,7 +4686,7 @@ table.shopping-cart-table tr th, table.shopping-cart-table tr td {
 .work-proc2-a-text{
   position: absolute;
   top: 44px;
-  left: 0;
+  left: 500px;
   transition: left .27s cubic-bezier(0.300, 0.100, 0.580, 1.000);
 }
 .work-proc2-a:hover .work-proc2-a-text{
@@ -4707,11 +4707,11 @@ table.shopping-cart-table tr th, table.shopping-cart-table tr td {
   margin-left:60px;
   height:200px;
   width:200px;
-  background:#f6e701;
+  background:#9b9b9b;
   transition: background .27s cubic-bezier(0.300, 0.100, 0.580, 1.000);
 }
 .work-proc2-a:hover .work-proc2-bg-block {
-  background:#5bd3be;
+  background:#f61d00;
   transition: background .27s cubic-bezier(0.300, 0.100, 0.580, 1.000);
 }
 
@@ -5453,7 +5453,7 @@ pre{
 }
 .centerdivpls{
   margin:auto;
-  
+
 }
 
 .bg-dark-alfa-40:before {
