@@ -1,28 +1,30 @@
-
 <?php
-        $db = new mysqli("localhost", "trevm12", "CxgY8Eb2tA006aAL", "faketwitter");
+  $db = new mysqli("localhost", "trevm12", "CxgY8Eb2tA006aAL", "faketwitter");
 
-        $fields = array('firstName', 'lastName', 'gen', 'username', 'email', 'password', 'passwordConfirmation');
-        $formSubmitted = true;
-        foreach($fields AS $field)
-        {
-          if(!isset($_POST[$field]))
-            $formSubmitted = false;
-        }
-        if($formSubmitted)
-        {
-          $encrypted = password_hash($fields['password']);
-          $sql = "INSERT INTO userinfo (username, password, email, firstName, lastName, gender, deleted) VALUES (?, ?, ?, ?, ?, ?, false)";
-          $stmt = $db.prepare($sql);
-          $stmt->bind_param("ssssss", $fields['username'], $fields['password'], $fields['email'], $fields['firstName'], $fields['lastName'], $fields['gender']);
-          $stmt->execute();
-          foreach($fields AS $field)
-            $$field = $_POST[$field];
+  $fields = array('username', 'password', 'email', 'passwordConfirmation');
+  $formSubmitted = true;
+  foreach($fields AS $field)
+  {
+    $$fields = $_POST[$field];
+    if(isset($_POST[$field]) == false)
+    $formSubmitted = false;
+  }
+  if($formSubmitted)
+  {
+    var_dump($username, $password, $email, $passwordConfirmation);
+    //if(strpos($fields['password'], $fields['passwordConfirmation']) !== false)
+      $encrypted = password_hash($password, PASSWORD_DEFAULT);
+      $sql = "INSERT INTO userinfo (username, password, email, deleted) VALUES (?, ?, ?, false)";
+      $stmt = $db.prepare($sql);
+      $stmt->bind_param("sss", $username, $password, $email);
+      $stmt->execute();
+    foreach($fields AS $field)
+    $$field = $_POST[$field];
 
-          header("Location: /login.php");
-        }
-        else
-        {
-          header("Location: /registration.php");
-        }
+    header("Location: /login.php");
+  }
+  else
+  {
+    header("Location: /registration.php");
+  }
 ?>

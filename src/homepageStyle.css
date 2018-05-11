@@ -1,3 +1,15 @@
+a:link
+{
+  color:white;
+}
+a:hover
+{
+  background-color: lightgreen;
+}
+a:visited
+{
+  color: white;
+}
 .top
 {
 
@@ -16,21 +28,22 @@
 }
 #loginButton
 {
-  background-color: blue;
+  background-color: lightblue;
   color: white;
   float: right;
 }
 #registerButton
 {
-  background-color: blue;
+  background-color: lightblue;
   color: white;
   float: right;
 }
-a:link
-{
-  color:white;
-}
-a:hover
+#homeButton
 {
   background-color: lightblue;
+    color: white;
+    padding: 3.9% 40%;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
 }

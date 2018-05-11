@@ -8,22 +8,6 @@
         <h1>REGISTRATION FORM</h1>
       </div>
       <div>
-        <label for="firstN">First Name:</label>
-        <input id="firstN" name="firstName">
-      </div>
-      <div>
-        <label for="lastN">Last Name:</label>
-        <input id="lastN" name="lastName">
-      </div>
-      <div>
-        <label for="gender">Gender:</label>
-        <select id="gender" name="gen">
-          <option value="m">Male</option>
-          <option value="f">Female</option>
-          <option value="oth">Other</option>
-        </select>
-      </div>
-      <div>
         <label for="user">Username:</label>
         <input id="user" name="username">
       </div>

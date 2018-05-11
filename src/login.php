@@ -3,7 +3,7 @@
     <link rel="stylesheet" type="text/css" href="register.css">
   </head>
   <body>
-    <form method="post" action="homepage.php">
+    <form method="post" action="homepage.html">
       <div>
         <h1>LOGIN FORM</h1>
       </div>
