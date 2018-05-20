@@ -1,8 +1,6 @@
-<html>
-<head><title>Individual User Site</title></head>
-<body>
-  <?php
-  $db = new mysqli("localhost", "trevm12", "CxgY8Eb2tA006aAL", "chinook");
+<?php
+  session_start();
+  $db = new mysqli("localhost", "trevm12", "CxgY8Eb2tA006aAL", "faketwitter");
 
   if ($db->connect_errno)
   {
@@ -10,7 +8,12 @@
     echo "Error: " . $mysqli->connect_error . "\n";
     exit;
   }
-
+?>
+<html>
+<head><title>Individual User Site</title></head>
+<body>
+  <?php
+  echo $_POST
   $id = $_GET["id"];
 
   $sql = "SELECT FirstName, LastName FROM customer WHERE CustomerId=?";
