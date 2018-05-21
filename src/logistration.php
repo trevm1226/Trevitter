@@ -1,3 +1,6 @@
+<?php
+  session_start();
+?>
 <html>
   <head>
     <link rel="stylesheet" type="text/css" href="register.css">
@@ -18,6 +21,18 @@
       <div>
         <button>LOGIN</button>
       </div>
+      <?php
+        if($_SESSION['error'] !== NULL)
+        {
+      ?>
+        <div>
+          <?php
+            echo $_SESSION['error'];
+            ?>
+        </div>
+        <?php
+        }
+        ?>
     </form>
   </body>
 </html>

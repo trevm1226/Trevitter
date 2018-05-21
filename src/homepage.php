@@ -84,12 +84,12 @@
           $tweets = $db->query($sql);
           foreach($tweets AS $tweet)
           {
+            echo "<br>";
             echo $tweet['tweetcontent'];
             echo "<br>";
             echo "by " . $tweet['username'];
             echo "<br>";
             echo "with " . $tweet['numLikes'] . " likes";
-            echo "<br>";
             echo "<br>";
           } 
         ?>
