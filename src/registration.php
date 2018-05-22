@@ -3,6 +3,8 @@
     <link rel="stylesheet" type="text/css" href="register.css">
   </head>
   <body>
+  <a href="homepage.php">Return home</a>
+  <br>
     <form method="post" action = "register.php">
       <div>
         <h1>REGISTRATION FORM</h1>

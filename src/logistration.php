@@ -6,6 +6,8 @@
     <link rel="stylesheet" type="text/css" href="register.css">
   </head>
   <body>
+    <a href="homepage.php">Return home</a>
+    <br>
     <form method="post" action="login.php">
       <div>
         <h1>LOGIN FORM</h1>

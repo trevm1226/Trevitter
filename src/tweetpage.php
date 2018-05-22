@@ -1,8 +1,10 @@
 <html>
 <head><title>Individual Tweet Site</title></head>
 <body>
+  <a href="homepage.php">Return home</a>
+  <br>
   <?php
-  $db = new mysqli("localhost", "trevm12", "CxgY8Eb2tA006aAL", "chinook");
+  $db = new mysqli("localhost", "trevm12", "CxgY8Eb2tA006aAL", "faketwitter");
 
   if ($db->connect_errno)
   {
@@ -11,16 +13,21 @@
     exit;
   }
 
-  $id = $_GET["id"];
+  $id = $_GET["tweetid"];
 
-  $sql = "SELECT FirstName, LastName FROM customer WHERE CustomerId=?";
+  $sql = "SELECT * FROM tweetinfo WHERE tweetid=?";
   $stmt = $db->prepare($sql);
   $stmt->bind_param("i", $id);
 
   $stmt->execute();
   $result = $stmt->get_result();
-  $name = $result->fetch_assoc();
-  echo $name['FirstName'];
+  $tweet = $result->fetch_assoc();
+  echo $tweet['tweetcontent'];
+  echo "<br>";
+  echo "by <a href='userpage.php?username=". $tweet['username']."'>" . $tweet['username'] . "</a>";
+  echo "<br>";
+  echo "with " . $tweet['numLikes'] . " likes";
+  echo "<br>";
   $stmt->close();
   ?>
 </body>

@@ -69,7 +69,7 @@
     ?>
         Login to view twits!
     <?php
-      }
+      } 
       else
       {
     ?>
@@ -77,7 +77,6 @@
         twits:
       </div>
       <div>
-        <!put tweets here>
         <?php
           $db = new mysqli("localhost", "trevm12", "CxgY8Eb2tA006aAL", "faketwitter");
           $sql = "SELECT * FROM tweetinfo";
@@ -87,9 +86,11 @@
             echo "<br>";
             echo $tweet['tweetcontent'];
             echo "<br>";
-            echo "by " . $tweet['username'];
+            echo "by <a href='userpage.php?username=". $tweet['username']."'>" . $tweet['username'] . "</a>";
             echo "<br>";
             echo "with " . $tweet['numLikes'] . " likes";
+            echo "<br>";
+            echo "<a href='tweetpage.php?tweetid=".$tweet['tweetid']."'>" ."View this tweet on its own page!" . "</a>";
             echo "<br>";
           } 
         ?>
