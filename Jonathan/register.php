@@ -1,4 +1,4 @@
-<html>
+  <html>
 
 <head>
 
@@ -38,7 +38,7 @@ if ($formSubmitted)
        ?>
        <div style="float:left;">
            <h1>Registration Form</h1>
-           <form>
+           <form method="post" action="doregister.php?rLoad=<?php echo rand(10000 , 99999 ) ?>">
 
                <div>
 
@@ -68,6 +68,13 @@ if ($formSubmitted)
                <div>
 
                    <input id="cPassword" type="password" placeholder="Confirm Password" name="cPassword">
+               </div>
+               <br>
+               <div>
+                   <select name="gender">
+                     <option value="male" selected>Male</option>
+                     <option value="female">Female</option>
+                   </select>
                </div>
                <br>
                <div>
